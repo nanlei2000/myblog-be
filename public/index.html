@@ -20,11 +20,86 @@
     }
 
     .app {
-      width: 300%;
-      height: 300%;
-      transform: rotate(0.125turn) translate(-50%, 20%);
-      background: #fff linear-gradient(#666 50%, transparent 0) 0% 0%/100% 2em;
+      /* width: 60%; */
+      /* height: 100%; */
+      margin: 0 auto;
+      text-align: center;
+      position: absolute;
+      left: 0;
+      width: 320px;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      margin-left: -160px;
+      margin-top: -160px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+      /* transform: rotate(0.125turn) translate(-50%, 20%); */
+      /* background: #fff linear-gradient(pink 50%, transparent 0) 0% 0%/100% 2em; */
 
+    }
+
+    @-webkit-keyframes lightSpeedIn {
+      from {
+        -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+        transform: translate3d(100%, 0, 0) skewX(-30deg);
+        opacity: 0;
+      }
+
+      60% {
+        -webkit-transform: skewX(20deg);
+        transform: skewX(20deg);
+        opacity: 1;
+      }
+
+      80% {
+        -webkit-transform: skewX(-5deg);
+        transform: skewX(-5deg);
+      }
+
+      to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    @keyframes lightSpeedIn {
+      from {
+        -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+        transform: translate3d(100%, 0, 0) skewX(-30deg);
+        opacity: 0;
+      }
+
+      60% {
+        -webkit-transform: skewX(20deg);
+        transform: skewX(20deg);
+        opacity: 1;
+      }
+
+      80% {
+        -webkit-transform: skewX(-5deg);
+        transform: skewX(-5deg);
+      }
+
+      to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    .animated {
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+    }
+
+    .lightSpeedIn {
+      -webkit-animation-name: lightSpeedIn;
+      animation-name: lightSpeedIn;
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
     }
 
     #wrapper {
@@ -89,13 +164,13 @@
 </head>
 
 <body>
+  <!-- <div class="app">
+  </div> -->
   <div class="app">
-  </div>
-  <div id="wrapper">
-    <h1>nanlei2000</h1>
-    <h2>Love coding,web</h2>
-    <p><a href="https://github.com/nanlei2000/my-blog" target="_blank">Blog</a></p>
-    <p><a href="https://github.com/nanlei2000" target="_blank">Github</a></p>
+    <h1 class="lightSpeedIn animated">nanlei2000</h1>
+    <h2 class="lightSpeedIn animated">Love coding,web</h2>
+    <p class="lightSpeedIn animated"><a href="https://github.com/nanlei2000/my-blog" target="_blank">Blog</a></p>
+    <p class="lightSpeedIn animated"><a href="https://github.com/nanlei2000" target="_blank">Github</a></p>
   </div>
 </body>
 
